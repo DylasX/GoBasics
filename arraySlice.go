@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func arraySlices() {
 	//array dimensionado
@@ -28,4 +31,31 @@ func arraySlices() {
 	slice = append(slice, slice...) // iterando ... o sea no hay una lista dentro de una lista si no que se recorre los elementos
 
 	fmt.Println(slice)
+}
+
+func sliceRange() {
+	slice := []string{"hola", "como", "estas"}
+
+	for i, valor := range slice {
+		fmt.Println(i, valor)
+	}
+}
+
+func palindrome(text string) bool {
+	var textReverse string
+	text = strings.ToLower(text)               // Pasamos el texto a minúsculas
+	text = strings.ReplaceAll(" ", text, text) // Eliminamos los espacios
+	for i := len(text) - 1; i >= 0; i-- {
+		//string es para que no devuelva el codigo ascii
+		textReverse += string(text[i])
+	}
+
+	fmt.Println(textReverse)
+	fmt.Println(text)
+	if text == textReverse {
+		return true
+	} else {
+		return false
+	}
+
 }

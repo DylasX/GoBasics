@@ -1,6 +1,7 @@
 package main
 
 import (
+	myPackage "basic/mypackage"
 	"fmt"
 )
 
@@ -38,6 +39,14 @@ func main() {
 
 	switches()
 	arraySlices()
+	fmt.Println(palindrome("anita lava la tina"))
+	makingMaps()
+	initializeStruct()
+
+	//caling mypackage
+	var myCar = myPackage.Car
+	myCar.Brand = "Ferrari 2"
+	fmt.Println(myCar)
 
 	//Los comparadores y operadores logicos, se usan similar a js exceptuando por la cohersion que en go no existe
 }
