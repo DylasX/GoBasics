@@ -1,7 +1,7 @@
 package main
 
 import (
-	myPackage "basic/mypackage"
+	myPackage "basics/mypackage"
 	"fmt"
 )
 
@@ -44,9 +44,19 @@ func main() {
 	initializeStruct()
 
 	//caling mypackage
-	var myCar = myPackage.Car
+	var myCar myPackage.Car
 	myCar.Brand = "Ferrari 2"
 	fmt.Println(myCar)
+
+	myPackage.TestMethod()
+
+	myCar2 := myPackage.Car{Brand: "Ferrari"}
+	myCar2.Color = "Yellow"
+
+	myCar2.InstanceMethodOnly()
+
+	// no valido no se puede acceder
+	// var tryCar myPackage.carPrivate
 
 	//Los comparadores y operadores logicos, se usan similar a js exceptuando por la cohersion que en go no existe
 }
