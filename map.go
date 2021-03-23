@@ -4,6 +4,10 @@ import "fmt"
 
 func makingMaps() {
 	m := make(map[string]int)
+	// x := make(map[string][]string)
+
+	// x["key"] = append(x["key"], "value")
+	// x["key"] = append(x["key"], "value1")
 	doubleMap := make(map[string]map[string]int)
 
 	//el nested map se debe initializar o si no quedaria nil al momento de asignar valor
@@ -18,7 +22,7 @@ func makingMaps() {
 	delete(m, "Jose")
 
 	// el ok es busqueda, si existe
-	value, ok := m["Jose"]
+	value, ok := m["Pepito"]
 	fmt.Println(value, ok)
 
 	//Recorrido simple

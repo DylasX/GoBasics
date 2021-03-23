@@ -54,9 +54,12 @@ func main() {
 	myCar2.Color = "Yellow"
 
 	myCar2.InstanceMethodOnly()
-
+	pointers()
 	// no valido no se puede acceder
 	// var tryCar myPackage.carPrivate
 
 	//Los comparadores y operadores logicos, se usan similar a js exceptuando por la cohersion que en go no existe
+	listInterface()
+	goRoutine()
+	exploreChannels()
 }
